@@ -1,0 +1,278 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: rgb(12, 11, 11);
+	font-weight: sans-serif;
+	color: white;
+}
+
+#container {
+	width: 100%;
+	height: 100vh;
+	padding: 15px 10px;
+	display: flex;
+	justify-content: space-between;
+	font-family: sans-serif;
+}
+
+.main-box {
+	width: 80px;
+	height: 95vh;
+	padding: 10px;
+	background-color: rgba(50, 48, 48, 0.497);
+	border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+
+.logo-box {
+	width: 100%;
+	height: 30%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	border-top-right-radius: 15px;
+}
+
+.logo{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 100%;
+	background-color: rgb(39, 164, 35);
+	color: aliceblue;
+	text-decoration: none;
+}
+
+.logo > span {
+	height: 5px;
+	width: 5px;
+	border-radius: 100%;
+	padding: 3px;
+	background-color: rgb(255, 255, 255);
+}
+
+/*Styling for the dashboard images/icon*/
+
+.main-box > .menu-box > section > a > img {
+	width: 20px;
+	height: 20px;
+}
+
+.main-box > .menu-box > section > a {
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.85s ease-in-out;
+}
+
+.main-box > .menu-box > section > a:hover {
+	background-color: rgb(39, 164, 35);
+}
+
+/*Styling for the dashboard icons*/
+.log-out-box > a {
+	width: 15px;
+	height: 15px;
+}
+
+.log-out-box > a > img {
+	width: 100%;
+	height: 100%;
+}
+
+/*menu-box styling*/
+.menu-box {
+	width: 100%;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: aliceblue;
+	gap: 20px;
+}
+
+/*log or sign-out box*/
+
+.log-out-box {
+	width: 100%;
+	height: 30%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding-bottom: 30px;
+}
+
+/*card-box*/
+.card-box {
+	width: calc(100% - 100px);
+	padding: 0px 0px 0px 0px;
+	height: 95vh;
+	background-color: rgb(12, 11, 11);
+	display: flex;
+	flex-direction: column;
+}
+
+.card-show-box {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(50, 48, 48, 0.497);
+	border-radius: 15px;
+}
+
+.card-show-box > a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(50, 48, 48, 0.497);
+	border-radius: 15px;
+}
+
+.card-show-box > a > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+/*popular movie box*/
+.popular-movie-box {
+	padding-top: 15px;
+	width: 100%;
+	height: 45vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.popular-movie-headings {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.popular-movie-headings > h2 {
+	color: white;
+}
+
+.popular-movie-headings > a {
+	font-size: 14px;
+	text-decoration: none;
+	color: rgb(39, 164, 35);
+	transition: all .5s ease-in-out;
+}
+
+.popular-movie-headings > a:hover {
+	color: white;
+}
+
+/*other cards*/
+.other-card-box {
+	width: 100%;
+	height: 90%;
+	background-color: rgb(12, 11, 11);
+	border-radius: 15px;
+	display: flex;
+	gap: 10px;
+}
+
+.cards {
+	width: 33%;
+	height: 100%;
+	background-color: rgba(50, 48, 48, 0.497);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}
+
+.first-card-image, .second-card-image, .third-card-image {
+	width: 100%;
+	height: 170px;
+}
+
+.first-card-image > a, .second-card-image > a, .third-card-image > a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.first-card-image > a > img, .second-card-image > a > img, .third-card-image > a > img  {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px 5px 0px 0px;
+	object-fit: cover;
+}
+
+.title-and-rating-box {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rate-box {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.rate-box p {
+	font-size: 14px;
+}
+
+.rate-icon {
+	width: 15px;
+	height: 15px;
+}
+
+.rate-icon > img {
+	width: 100%;
+	height: 100%;
+}
+
+.play {
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .5s ease-in-out;
+}
+
+.play:hover {
+	background-color: rgb(39, 164, 35);
+}
+
+.play >img {
+	width: 12px;
+	height: 10px;
+}
