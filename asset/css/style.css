@@ -1,278 +1,401 @@
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+	/*border: 1px solid;*/
 }
 
 body {
-	width: 100%;
-	height: 100vh;
-	overflow-x: hidden;
-	background-color: rgb(12, 11, 11);
-	font-weight: sans-serif;
-	color: white;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(33, 33, 33);
+  font-family: "Poppins" sans-serif;
+  color: white;
 }
 
 #container {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins" sans-serif;
+}
+
+.head-section {
 	width: 100%;
 	height: 100vh;
-	padding: 15px 10px;
 	display: flex;
-	justify-content: space-between;
-	font-family: sans-serif;
 }
 
 .main-box {
-	width: 80px;
-	height: 95vh;
-	padding: 10px;
-	background-color: rgba(50, 48, 48, 0.497);
-	border-radius: 15px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
+  width: 100px;
+  height: 100vh;
+  padding: 10px;
+  background-color: rgba(33, 33, 33);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logo-box {
-	width: 100%;
-	height: 30%;
-	padding: 10px;
-	display: flex;
-	justify-content: center;
-	border-top-right-radius: 15px;
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 15px;
 }
 
-.logo{
-	width: 40px;
-	height: 40px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	border-radius: 100%;
-	background-color: rgb(39, 164, 35);
-	color: aliceblue;
-	text-decoration: none;
+.logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 100%;
+  background-color: rgb(138, 192, 136);
+  color: aliceblue;
+  text-decoration: none;
 }
 
 .logo > span {
-	height: 5px;
-	width: 5px;
-	border-radius: 100%;
-	padding: 3px;
-	background-color: rgb(255, 255, 255);
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  padding: 3px;
+  background-color: aliceblue;
 }
 
 /*Styling for the dashboard images/icon*/
 
 .main-box > .menu-box > section > a > img {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .main-box > .menu-box > section > a {
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.85s ease-in-out;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.85s ease-in-out;
 }
 
-.main-box > .menu-box > section > a:hover {
-	background-color: rgb(39, 164, 35);
+.main-box > .menu-box > section > a.home-link-hover {
+  background-color: rgb(39, 164, 35);
 }
 
 /*Styling for the dashboard icons*/
 .log-out-box > a {
-	width: 15px;
-	height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .log-out-box > a > img {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /*menu-box styling*/
 .menu-box {
-	width: 100%;
-	height: 40%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: aliceblue;
-	gap: 20px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  gap: 20px;
 }
 
 /*log or sign-out box*/
 
 .log-out-box {
-	width: 100%;
-	height: 30%;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	padding-bottom: 30px;
+  width: 100%;
+  height: 30%;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 30px;
 }
 
 /*card-box*/
-.card-box {
-	width: calc(100% - 100px);
-	padding: 0px 0px 0px 0px;
-	height: 95vh;
-	background-color: rgb(12, 11, 11);
-	display: flex;
-	flex-direction: column;
+.mainCardWrapper {
+  width: 100%;
+  height: 100vh;
 }
 
-.card-show-box {
-	width: 100%;
-	height: 50vh;
+.mainCard {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+
+.mainCard > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+	border-radius: 20px;
+}
+
+.image-line-box {
 	display: flex;
-	flex-direction: column;
-	background-color: rgba(50, 48, 48, 0.497);
+	gap: 10px;
+	position: absolute;
+	bottom: 0;
+}
+
+.image-line-box > div {
+	width: 50px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: aliceblue;
+}
+
+.mainCard > div.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 48, 48, 0.95) 40%,
+    rgba(0, 0, 0, 0.5)
+  );
+  position: absolute;
+	top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
 	border-radius: 15px;
 }
 
-.card-show-box > a {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	background-color: rgba(50, 48, 48, 0.497);
-	border-radius: 15px;
+.overlay-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
 }
 
-.card-show-box > a > img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-/*popular movie box*/
-.popular-movie-box {
-	padding-top: 15px;
+.title > h1 {
+  font-size: 36pt;
+  font-variant: small-caps;
+}
+
+.title > img {
+  width: 50px;
+  height: 50px;
+}
+
+/*movie's information style*/
+.movie-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.movie-info > .metaScore {
+  color: rgb(138, 192, 136);
+  background: rgb(33, 33, 33);
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.movie-info > .movie-rate {
+  background: rgb(33, 33, 33);
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.movie-info > .imdbRating {
+	background: rgb(33, 33, 33);
+  border: 1px dotted;
+  padding: 5px;
+	border-radius: 5px;
+}
+
+.movie-actors {
+  font-size: 14px;
+  font-style: italic;
+	margin-bottom: 20px;
+}
+
+/*watch button & add list*/
+
+.movie-watch {
+  display: flex;
+  gap: 12px;
+}
+
+.movie-watch > a {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: aliceblue;
+	background-color: rgb(33, 33, 33);
+	font-variant: small-caps;
+}
+
+a.watch {
+  background-color: rgb(138, 192, 136);
+}
+
+/*popular movie styling*/
+
+.popular-movie {
 	width: 100%;
-	height: 45vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: 12px;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 50px;
+}
+
+.popular-movie-list {
+	width: 100%;
+	display: flex;
 	gap: 10px;
 }
 
-.popular-movie-headings {
-	width: 100%;
-	height: 10%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.film {
+	width: 25%;
+	height: 280px;
+	padding: 6px;
+	display: flex;flex-direction: column;
+	gap: 12px;
+	background-color: rgba(50, 48, 48, 0.95);
+	border-radius: 12px;
+	font-family: 'Poppins', sans-serif;
 }
 
-.popular-movie-headings > h2 {
-	color: white;
-}
-
-.popular-movie-headings > a {
+.film p {
 	font-size: 14px;
-	text-decoration: none;
-	color: rgb(39, 164, 35);
-	transition: all .5s ease-in-out;
 }
 
-.popular-movie-headings > a:hover {
-	color: white;
+.film > .img-wrapper {
+	position: relative;
 }
 
-/*other cards*/
-.other-card-box {
+.film > .img-wrapper > img {
 	width: 100%;
-	height: 90%;
-	background-color: rgb(12, 11, 11);
-	border-radius: 15px;
-	display: flex;
-	gap: 10px;
-}
-
-.cards {
-	width: 33%;
-	height: 100%;
-	background-color: rgba(50, 48, 48, 0.497);
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	padding: 10px;
-}
-
-.first-card-image, .second-card-image, .third-card-image {
-	width: 100%;
-	height: 170px;
-}
-
-.first-card-image > a, .second-card-image > a, .third-card-image > a {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.first-card-image > a > img, .second-card-image > a > img, .third-card-image > a > img  {
-	width: 100%;
-	height: 100%;
-	border-radius: 5px 5px 0px 0px;
 	object-fit: cover;
+	height: 150px;
+	border-radius: 6px;
 }
 
-.title-and-rating-box {
-	width: 100%;
-	height: fit-content;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.rate-box {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-}
-
-.rate-box p {
-	font-size: 14px;
-}
-
-.rate-icon {
-	width: 15px;
-	height: 15px;
-}
-
-.rate-icon > img {
-	width: 100%;
-	height: 100%;
-}
-
-.play {
+.film > .img-wrapper > .fav {
 	width: 40px;
 	height: 40px;
-	background-color: transparent;
-	border-radius: 5px;
+	position: absolute;
+	background-color: rgba(159, 152, 143, 0.5);
+	top: 10px;
+	left: 10px;
+	border-radius: 3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all .5s ease-in-out;
 }
 
-.play:hover {
-	background-color: rgb(39, 164, 35);
+.fav > img {
+	width: 15px;
 }
 
-.play >img {
-	width: 12px;
-	height: 10px;
+.film > .popular-movie-title-and-rate-box {
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Poppins', sans-serif;
+}
+
+.popular-movie-title {
+	color: aliceblue;
+	font-variant: small-caps;
+}
+
+.popular-movie-rate {
+	color: rgb(138, 192, 136);
+	display: flex;
+	align-items: flex-start;
+}
+
+.popular-movie-rate > h4 {
+	font-size: 14px;
+}
+
+.popular-movie-rate > .star {
+	font-size: 11px;
+}
+
+.genre-box {
+  width: 100%;
+  height: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.film .genre{
+	font-size: 12px;
+	color: rgb(107, 105, 105);
+  position: absolute;
+  transition: 850ms ease-in-out;
+  top: 20%;
+}
+
+.film .language {
+	font-size: 12px;
+	color: rgb(234, 243, 136);
+  position: absolute;
+  top: 20%;
+  left: -50%;
+  transition: 850ms ease-in-out;
+}
+
+.film .minutes {
+	font-size: 12px;
+	color: rgb(253, 144, 66);
+  position: absolute;
+  bottom: -100%;
+  transition: 850ms ease-in-out;
+}
+
+/*popular movie styling*/
+
+.coming-soon-movie {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.coming-soon-movie-list {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+}
+
+.remind-me-later {
+	padding: 10px;
+	background-color: rgb(138, 192, 136);
+	border: 1px solid transparent;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

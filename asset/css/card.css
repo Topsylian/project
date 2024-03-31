@@ -81,7 +81,6 @@ body {
 
 .rate-box {
 	display: flex;
-	align-items: center;
 	gap: 5px;
 }
 
@@ -90,8 +89,8 @@ body {
 }
 
 .rate-icon {
-	width: 15px;
-	height: 15px;
+	width: 14px;
+	height: 14px;
 }
 
 .rate-icon > img {

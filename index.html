@@ -11,116 +11,227 @@
 
 	<body>
 		<main id="container">
-			<section class="main-box">
-				<!--The containing box that holds the dashboard contents-->
-				<section class="logo-box">
-					<a href="#" class="logo">
-						<span></span>
-					</a>
-				</section>
-				<!--Logo-section-->
-				<section class="menu-box">
-					<!--menu section-->
-					<!--home section-->
-					<section class="home-box">
-						<a href="#" class="home-link">
-							<img src="./asset/icon/home.png" alt="">
+			<section class="head-section">
+				<section class="main-box">
+					<!--The containing box that holds the dashboard contents-->
+					<section class="logo-box">
+						<a href="#" class="logo">
+							<span></span>
 						</a>
 					</section>
-					<section class="favorite-box">
-						<a href="#" class="favorite-link">
-							<img src="./asset/icon/heart.png" alt="">
-						</a>
+					<!--Logo-section-->
+					<section class="menu-box">
+						<!--menu section-->
+						<!--home section-->
+						<section class="home-box">
+							<a href="#" class="home-link">
+								<img src="./asset/icon/home.png" alt="">
+							</a>
+						</section>
+						<section class="favorite-box">
+							<a href="#" class="favorite-link">
+								<img src="./asset/icon/heart.png" alt="">
+							</a>
+						</section>
+						<section class="wishlist-box">
+							<a href="#" class="wishlist-link">
+								<img src="./asset/icon/clock.png" alt="">
+							</a>
+						</section>
+						<section class="settings-box">
+							<a href="#" class="settings-link">
+								<img src="./asset/icon/setting.png" alt="">
+							</a>
+						</section>
+						<!--settings-->
 					</section>
-					<section class="wishlist-box">
-						<a href="#" class="wishlist-link">
-							<img src="./asset/icon/clock.png" alt="">
-						</a>
-					</section>
-					<section class="settings-box">
-						<a href="#" class="settings-link">
-							<img src="./asset/icon/setting.png" alt="">
-						</a>
-					</section>
-					<!--settings-->
-				</section>
 
-				<!--Log/sign out section-->
-				<section class="log-out-box">
-					<a href="#">
-						<img src="./asset/icon/address-card.png" alt=""></a>
-				</section>
-			</section>
-			<section class="card-box">
-				<section class="card-show-box">
-					<a href="./page/card.html">
-						<img src="./asset/images/movie-1.jpg" alt="">
-					</a>
-				</section>
-				<section class="popular-movie-box">
-					<section class="popular-movie-headings">
-						<h2>Popular Movie</h2>
-						<a href="#">Show All</a>
+					<!--Log/sign out section-->
+					<section class="log-out-box">
+						<a href="#">
+							<img src="./asset/icon/address-card.png" alt=""></a>
 					</section>
-					<section class="other-card-box">
-						<!--first card box-->
-						<section class="first-card-box cards">
-							<section class="first-card-image">
-								<a href="./page/card.html">
-									<img src="./asset/images/movie-2.jpg" alt="">
-								</a>
-							</section>
-							<section class="title-and-rating-box">
-								<h3 class="title">Dunki</h3>
-								<section class="rate-box">
-									<span class="rate-icon">
-										<img src="./asset/icon/setting.png" alt="">
-									</span>
-									<p class="rate-number">3</p>
-								</section>
-							</section>
-							<section class="play">
-								<img src="./asset/icon/play.png" alt="">
-							</section>
-						</section>
-						<!--second card box-->
-						<section class="second-card-box cards">
-							<section class="second-card-image">
-								<a href="./page/card.html">
-									<img src="./asset/images/movie-3.jpg" alt="">
-								</a>
-							</section>
-							<section class="title-and-rating-box">
-								<h3 class="title">300 Rise Of Empire</h3>
-								<section class="rate-box">
-									<span class="rate-icon">
-										<img src="./asset/icon/setting.png" alt="">
-									</span>
-									<p class="rate-number">4</p>
-								</section>
-							</section>
-							<section class="play">
-								<img src="./asset/icon/play.png" alt="">
-							</section>
-						</section>
-						<!--third card box-->
-						<section class="third-card-box cards">
-							<section class="third-card-image">
-								<a href="./page/card.html">
+				</section>
+				<!--main card section-->
+				<section class="mainCardWrapper">
+					<section class="mainCard">
+						<div class="overlay">
+							<div class="overlay-content">
+								<div class="title">
+									<h1>the wolf of wall street </h1>
+								</div>
+								<div class="movie-info">
+									<div class="metaScore">75% Match</div>
+									<div class="movie-year">2013</div>
+									<div class="movie-type">Movies</div>
+									<div class="movie-rate">PG-13</div>
+									<div class="imdbRating">8.2</div>
+								</div>
+								<div class="movie-plot">
+									<p>Based on the true story of Jordan Belfort, from his rise to a wealthy
+										stock-broker living the high life to his fall involving crime, corruption and
+										the federal government.</p>
+								</div>
+								<div class="movie-actors">
+									<p>Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey</p>
+								</div>
+								<div class="movie-watch">
+									<a href="#" class="watch">watch</a>
+									<a href="#" class="wishlist">add list</a>
+								</div>
+							</div>
+						</div>
+						<img src="./asset/images/movie-1.jpg" alt="">
+					</section>
+					<!--Popular section-->
+					<section class="popular-movie">
+						<h1>Popular</h1>
+						<section class="popular-movie-list">
+							<!-- first-popular movie-->
+							<section class="film first-movie">
+								<section class="img-wrapper">
 									<img src="./asset/images/movie-4.jpg" alt="">
-								</a>
-							</section>
-							<section class="title-and-rating-box">
-								<h3 class="title">The Wolverine</h3>
-								<section class="rate-box">
-									<span class="rate-icon">
-										<img src="./asset/icon/setting.png" alt="">
-									</span>
-									<p class="rate-number">4</p>
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
 								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>5.1</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<section class="genre-box">
+									<p class="genre"></p>
+									<p class="language"></p>
+									<p class="minutes"></p>
+								</section>
+								<p class="imdbVotes">Votes: 786,985</p>
 							</section>
-							<section class="play">
-								<img src="./asset/icon/play.png" alt="">
+							<!-- second-popular movie-->
+							<section class="film second-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>5.1</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<section class="genre-box">
+									<p class="genre"></p>
+									<p class="language"></p>
+									<p class="minutes"></p>
+								</section>
+								<p class="imdbVotes">Votes: 786,985</p>
+							</section>
+							<!--third-popular movie-->
+							<section class="film third-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>5.1</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<section class="genre-box">
+									<p class="genre"></p>
+									<p class="language"></p>
+									<p class="minutes"></p>
+								</section>
+								<p class="imdbVotes">Votes: 786,985</p>
+							</section>
+							<!--fourth-popular movie-->
+							<section class="film fourth-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>5.1</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<section class="genre-box">
+									<p class="genre"></p>
+									<p class="language"></p>
+									<p class="minutes"></p>
+								</section>
+								<p class="imdbVotes">Votes: 786,985</p>
+							</section>
+						</section>
+					</section>
+					<!--Coming soon movies-->
+					<section class="coming-soon-movie">
+						<h1>Coming soon</h1>
+						<section class="coming-soon-movie-list">
+							<!-- first-popular movie-->
+							<section class="film first-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>0.0</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<button class="remind-me-later">Remind me <span>🔔</span></button>
+							</section>
+							<!-- second-popular movie-->
+							<section class="film second-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">Avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>0.0</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<button class="remind-me-later">Remind me <span>🔔</span></button>
+							</section>
+							<!--third-popular movie-->
+							<section class="film third-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">Avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>0.0</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<button class="remind-me-later">Remind me <span>🔔</span></button>
+							</section>
+							<!--fourth-popular movie-->
+							<section class="film fourth-movie">
+								<section class="img-wrapper">
+									<img src="./asset/images/movie-4.jpg" alt="">
+									<section class="fav"><img src="./asset/icon/heart.png" alt=""></section>
+								</section>
+								<section class="popular-movie-title-and-rate-box">
+									<h4 class="popular-movie-title">Avatar</h4>
+									<section class="popular-movie-rate">
+										<h4>0.0</h4>
+										<h4 class="star">⭐</h4>
+									</section>
+								</section>
+								<button class="remind-me-later">Remind me <span>🔔</span></button>
 							</section>
 						</section>
 					</section>
