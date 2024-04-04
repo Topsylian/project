@@ -26,6 +26,8 @@ promise
 })
 */
 
+
+// add commets to make your code more readable
 let movie = [
   {
     Title: "Avatar",
@@ -77,7 +79,7 @@ function fetchData(msg) {
     if (typeof msg === "object") {
       resolve(msg);
     } else {
-      reject("unable to activate Ija mode");
+      reject("unable to activate Ija mode"); //😂 nice one
     }
   });
 }
@@ -91,7 +93,7 @@ fetchData(movie)
     console.log(data);
     array = data[0].images;
 
-    data.forEach(function (el) {
+    data.forEach(function (el) { // "insertAdjacentHTML" <== look into this js Function it would be more effecient
       popularMovies[data.indexOf(el)].innerText = el.Title;
       genre[data.indexOf(el)].innerText = el.type;
       language[data.indexOf(el)].innerText = el.country;
@@ -103,7 +105,7 @@ fetchData(movie)
   });
 
 let array;
-
+//  add a comment
 let mainImage = document.querySelector(".mainCard > img");
 let i = 0;
 let timer = 5000;
@@ -144,9 +146,9 @@ for (let k = 0; k < genre.length; k++) {
   setInterval(changeText, 4000);
 }
 
-
-
 setInterval(changeImg, timer);
+
+// nice work
 
 /*
 let homeBtn = document.querySelector("a.home-link");
