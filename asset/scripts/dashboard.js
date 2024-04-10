@@ -18,8 +18,14 @@ async function fetchMovies() {
 
 let promise = fetchMovies();
 
-let mainMovieTitle = document.querySelector(".title > h1");
-let popularMoviesTitle = document.querySelectorAll("h4.popular-movie-title");
+let mainMovieArray;
+
+let popularMovies = document.querySelectorAll(
+  ".popular-movie h4.popular-movie-title"
+);
+
+let array;
+
 let mainImage = document.querySelector(".mainCard > img");
 let i = 0;
 let timer = 5000; //the timer for switching the images inside of the big movie frame.
@@ -71,6 +77,7 @@ promise
   .catch(function (err) {
     console.log(`The error is ${err}`);
   });
+  
 /*The code below display slideshow of genre's box information*/
 
 for (let k = 0; k < genre.length; k++) {
@@ -98,28 +105,9 @@ for (let k = 0; k < genre.length; k++) {
   setInterval(changeText, 4000);
 }
 
-//The code that changes the favorite button icon on each image's frame
+setInterval(changeImg, timer);
 
-const favBox = document.querySelectorAll(".fav");
-const favIcons = document.querySelectorAll(".fav > img");
-
-for (let j = 0; j < favBox.length; j++) {
-  favBox[j].addEventListener("click", function () {
-    if (favIcons[j].getAttribute("src") === "./asset/icon/heart.png") {
-      favIcons[j].setAttribute("src", "./asset/icon/heart-hover.png");
-      //favIcons[j].style.transition = "850ms ease-in-out";
-      console.log("work");
-    } else {
-      console.log("doesn't work");
-      favIcons[j].setAttribute("src", "./asset/icon/heart.png");
-    }
-  });
-}
-
-//the code ends here.
-
-//The code that changes the menu icons on hovering...
-
+let homeBtn = document.querySelector("a.home-link");
 const menuButtons = document.querySelectorAll(".menu-box > section > a");
 const menuIcons = document.querySelectorAll(".menu-box > section > a > img");
 
