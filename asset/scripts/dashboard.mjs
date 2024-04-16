@@ -1,14 +1,13 @@
-"use strict";
 
 /*The code below is to fetch the api data in an asynchronous way*/
-//import { showPlayer } from "./card.js";
-
-async function fetchMovies() {
+let dataInfo;
+export default async function fetchMovies() {
   try {
     const result = await fetch(
       "https://movieapp-zyqr.onrender.com/api/v1/nowplayingmovies"
     );
     const data = await result.json();
+    dataInfo = data;
     console.log(data);
     return data;
   } catch (error) {
@@ -17,6 +16,8 @@ async function fetchMovies() {
     );
   }
 }
+
+export { dataInfo };
 
 async function fetchPopular() {
   try {
@@ -30,6 +31,8 @@ async function fetchPopular() {
     ); 
   }
 }
+
+export { fetchMovies }
 
 const popularPromise = fetchPopular();
 
