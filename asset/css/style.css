@@ -291,7 +291,16 @@ a.wishlist:hover {
 .popular-movie {
 	width: 100%;
 	display: flex;
-  flex-direction: row;
+  flex-direction: column;
+	gap: 12px;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 50px;
+}
+
+.popular-movie-box {
+	width: 100%;
+	display: flex;
+  flex-wrap: wrap;
 	gap: 12px;
 	font-family: 'Poppins', sans-serif;
 	margin-bottom: 50px;
