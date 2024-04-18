@@ -97,7 +97,7 @@ fetchMovies()
         //styling movie image box
         movieImageBox.style.width = "100%";
         movieImageBox.style.height = "300px";
-        movieImageBox.style.background = "rgb(33, 33, 33, 0.5)";
+        movieImageBox.style.background = "rgb(33, 33, 33, 0.4)";
         movieImageBox.style.display = "flex";
         movieImageBox.setAttribute("href", `./page/card.html`);
         let innerId = data[j].id;
