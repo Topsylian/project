@@ -197,6 +197,18 @@ fetchPopular()
         movieImageBox.style.background = "rgb(33, 33, 33, 0.5)";
         movieImageBox.style.display = "flex";
         movieImageBox.setAttribute("href", `./page/card.html`);
+        let innerId = data[j].id;
+        let innerSrc = data[j].profile_picture_url;
+        let innerTitle = data[j].original_title;
+        let innerPlot = data[j].overview;
+        let innerDate = data[j].release_date;
+        movieImageBox.addEventListener("click", () => {
+          localStorage.setItem("currentId", innerId);
+          localStorage.setItem("currentSrc", innerSrc);
+          localStorage.setItem("currentTitle", innerTitle);
+          localStorage.setItem("currentPlot", innerPlot);
+          localStorage.setItem("currentReleaseDate", innerDate);
+        });
         //movieImageBox.style.textDecoration = "none";
         //styling movie image
         movieImage.style.width = "100%";
@@ -231,6 +243,17 @@ fetchPopular()
         movieDetails.appendChild(movieTitle);
         movieDetails.appendChild(movieDate);
         movieDetails.appendChild(moviePopularity);
+
+        function handleScreenSize(media) {
+          if (media.matches) {
+            movies.style.width = "100%";
+          }
+        }
+
+        const mediaQuery = window.matchMedia("(max-width: 440px)");
+        handleScreenSize(mediaQuery);
+
+        mediaQuery.addEventListener("change", handleScreenSize);
       }
       popularMoviesList();
     }
