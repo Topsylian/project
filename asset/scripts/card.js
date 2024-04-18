@@ -1,4 +1,9 @@
-import promise, { dataInfo } from "./dashboard.mjs";
+//import fetchMovies from "./dashboard.js";
+let storedId = localStorage.getItem("currentId");
+let storedSrc = localStorage.getItem("currentSrc");
+let storedTitle = localStorage.getItem("currentTitle");
+let storedPlot = localStorage.getItem("currentPlot");
+let storedDate = localStorage.getItem("currentDate");
 
 function showPlayer() {
   let container = document.querySelector("main");
@@ -20,17 +25,16 @@ function showPlayer() {
 
   //styling the iFrame to display the video
   iPlayer.style.width = "100%";
-  iPlayer.style.height = "700px";
+  iPlayer.style.height = "60vh";
   iPlayer.style.borderRadius = "10px";
-  iPlayer.style.display = "flex";
-  iPlayer.style.background = "red";
-  iPlayer.style.flexDirection = "column";
+  iPlayer.style.background = "rgb(138, 192, 136)";
   iPlayer.style.margin = "20px 0px";
+  iPlayer.src = storedSrc;
   //styling the optionPlayer by clicking another player if the current one failed to load
   optionPlayer.style.width = "100%";
   optionPlayer.style.textAlign = "center";
-  optionPlayer.innerText =
-    "If the current player failed, click on other player";
+  //optionPlayer.innerText =
+    //"If the current player failed, click on other player";
   optionPlayer.style.marginBottom = "15px";
   //styling player
   player.style.width = "200px";
@@ -41,40 +45,49 @@ function showPlayer() {
   player.style.borderRadius = "10px";
   player.style.textDecoration = "none";
   player.style.color = "aliceblue";
-  player.innerText = "Vidsrc";
+  player.innerText = "Play video";
   player.setAttribute("href", "http://vidsrc.to/embed/movie");
   player.addEventListener("click", () => {
-    player.setAttribute("href", "http://vidsrc.to/embed/movie/693134");
+    player.setAttribute("href", `http://vidsrc.to/embed/movie/${storedId}`);
   });
   player.style.marginBottom = "50px";
   //styling movieDisplay
   movieDisplay.style.width = "100%";
   movieDisplay.style.height = "600px";
+  movieDisplay.style.background = "rgb(80, 80, 80)";
   movieDisplay.style.borderRadius = "10px";
   movieDisplay.style.display = "flex";
   movieDisplay.style.gap = "12px";
-  movieDisplay.style.background = "orange";
   movieDisplay.style.flexDirection = "row";
   movieDisplay.style.margin = "20px 0px";
   //styling movieImageBox
-  movieImageBox.style.width = "20%";
-  movieImageBox.style.height = "100%";
+  movieImageBox.style.width = "30%";
+  movieImageBox.style.height = "300px";
   movieImageBox.style.borderRadius = "10px";
   movieImageBox.style.display = "flex";
   movieImageBox.style.background = "teal";
   //styling movieImage
   movieImage.style.width = "100%";
   movieImage.style.height = "100%";
-	movieImage.style.borderRadius = "10px";
-	
+  movieImage.style.borderRadius = "10px";
+  movieImage.style.objectFit = "cover";
+  movieImage.src = storedSrc;
   //styling movieDetails
   movieDetails.style.width = "80%";
   movieDetails.style.height = "100%";
   movieDetails.style.borderRadius = "10px";
   movieDetails.style.display = "flex";
-  movieDetails.style.background = "red";
+  movieDetails.style.gap = "10px";
   movieDetails.style.flexDirection = "column";
+  movieDetails.style.padding = "10px";
   //styling movieTitle
+  movieTitle.innerText = storedTitle;
+  //styling moviePlot
+  moviePlot.innerText = storedPlot;
+  //styling movieDate
+  movieDate.innerText = storedDate;
+  //styling movieLanguage
+ //movieLanguage.innerText = `${storedLanguage}`;
 
   container.appendChild(iPlayer);
   container.appendChild(optionPlayer);
@@ -86,9 +99,22 @@ function showPlayer() {
   movieDetails.appendChild(movieTitle);
   movieDetails.appendChild(moviePlot);
   movieDetails.appendChild(movieDate);
-  movieDetails.appendChild(movieDuration);
-  movieDetails.appendChild(moviePopularity);
-  movieDetails.appendChild(movieLanguage);
+  //movieDetails.appendChild(movieDuration);
+  //movieDetails.appendChild(moviePopularity);
+  //movieDetails.appendChild(movieLanguage);
+
+  function handleScreenSize(media) {
+    if (media.matches) {
+      movieDisplay.style.flexDirection = 'column';
+      movieImageBox.style.width = "100%";
+
+    }
+  }
+
+  const mediaQuery = window.matchMedia("(max-width: 440px)");
+  handleScreenSize(mediaQuery);
+
+  mediaQuery.addEventListener("change", handleScreenSize);
 }
 
 showPlayer();

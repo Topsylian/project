@@ -1,13 +1,28 @@
-
 /*The code below is to fetch the api data in an asynchronous way*/
-let dataInfo;
-export default async function fetchMovies() {
+
+let movies;
+
+async function fetchMovies() {
   try {
     const result = await fetch(
       "https://movieapp-zyqr.onrender.com/api/v1/nowplayingmovies"
     );
-    const data = await result.json();
-    dataInfo = data;
+    movies = await result.json();
+    //console.log(movies);
+    return movies;
+  } catch (error) {
+    console.log(
+      `Getting data from api resulted in an error and ${error.message}`
+    );
+  }
+}
+
+async function fetchPopular() {
+  try {
+    const response = await fetch(
+      "https://movieapp-zyqr.onrender.com/api/v1/popular"
+    );
+    const data = await response.json();
     console.log(data);
     return data;
   } catch (error) {
@@ -17,28 +32,9 @@ export default async function fetchMovies() {
   }
 }
 
-export { dataInfo };
-
-async function fetchPopular() {
-  try {
-    const response = await fetch("https://movieapp-zyqr.onrender.com/api/v1/popular");
-    const data = await response.json();
-    console.log(data)
-    return data;
-  } catch (error) {
-    console.log(
-      `Getting data from api resulted in an error and ${error.message}`
-    ); 
-  }
-}
-
-export { fetchMovies }
-
-const popularPromise = fetchPopular();
-
 //saving the return Promise into a variable called promise to make use of the return data.
 
-let promise = fetchMovies();
+//let promise = fetchMovies();
 
 let mainMovieTitle = document.querySelector(".title > h1");
 let mainImage = document.querySelector(".mainCard > img");
@@ -54,8 +50,9 @@ let popularMovie = document.querySelector(".popular-movie-box");
 
 let frameLen = 20; //number of videos in the home page;
 
-promise
+fetchMovies()
   .then(function (data) {
+    console.log(movies);
     let dataLen = data.length;
 
     console.log(data[0]);
@@ -103,6 +100,18 @@ promise
         movieImageBox.style.background = "rgb(33, 33, 33, 0.5)";
         movieImageBox.style.display = "flex";
         movieImageBox.setAttribute("href", `./page/card.html`);
+        let innerId = data[j].id;
+        let innerSrc = data[j].profile_picture_url;
+        let innerTitle = data[j].original_title;
+        let innerPlot = data[j].overview;
+        let innerDate = data[j].release_date;
+        movieImageBox.addEventListener("click", () => {
+          localStorage.setItem("currentId", innerId);
+          localStorage.setItem("currentSrc", innerSrc);
+          localStorage.setItem("currentTitle", innerTitle);
+          localStorage.setItem("currentPlot", innerPlot);
+          localStorage.setItem("currentReleaseDate", innerDate);
+        });
         //movieImageBox.style.textDecoration = "none";
         //styling movie image
         movieImage.style.width = "100%";
@@ -137,6 +146,17 @@ promise
         movieDetails.appendChild(movieTitle);
         movieDetails.appendChild(movieDate);
         movieDetails.appendChild(moviePopularity);
+
+        function handleScreenSize(media) {
+          if (media.matches) {
+            movies.style.width = "100%";
+          }
+        }
+
+        const mediaQuery = window.matchMedia("(max-width: 440px)");
+        handleScreenSize(mediaQuery);
+
+        mediaQuery.addEventListener("change", handleScreenSize);
       }
 
       nowPlayingMoviesList();
@@ -146,7 +166,7 @@ promise
     console.log(`The error is ${err}`);
   });
 
-popularPromise
+fetchPopular()
   .then((data) => {
     for (let j = 0; j < frameLen; j++) {
       function popularMoviesList() {
@@ -212,12 +232,11 @@ popularPromise
         movieDetails.appendChild(movieDate);
         movieDetails.appendChild(moviePopularity);
       }
-  
       popularMoviesList();
     }
   })
   .catch((err) => {
-    console.log(err)
+    console.log(err);
   });
 
 //("https://moviesfrees.netlify.app/movie_overview/693134");

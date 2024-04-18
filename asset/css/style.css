@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-	/*border: 1px solid;*/
 }
 
 body {
@@ -227,38 +226,17 @@ body {
 	margin-bottom: 20px;
 }
 
-/*watch button & add list*/
-
-.movie-watch {
-  display: flex;
-  gap: 12px;
-}
-
-.movie-watch > a {
-  width: 100px;
-  text-align: center;
-  padding: 10px;
+.watch {
+  width: 150px;
+  height: 40px;
   border-radius: 5px;
+  color: aliceblue;
+  font-weight: 600;
+  background-color: rgb(138, 192, 136);
+  display: flex;
   text-decoration: none;
-  color: aliceblue;
-	background-color: rgb(33, 33, 33);
-	font-variant: small-caps;
-  transition: 500ms ease-in-out;
-}
-
-a.watch {
-  background-color: rgb(138, 192, 136);
-  color: rgb(33, 33, 33);
-}
-
-a.watch:hover {
-  background-color: rgb(33, 33, 33);
-  color: aliceblue;
-}
-
-a.wishlist:hover {
-  background-color: rgb(138, 192, 136);
-  color: rgb(33, 33, 33);
+  justify-content: center;
+  align-items: center;
 }
 
 /*Now playing movie*/
@@ -304,4 +282,58 @@ a.wishlist:hover {
 	gap: 12px;
 	font-family: 'Poppins', sans-serif;
 	margin-bottom: 50px;
+}
+
+@media screen and (max-width: 440px) {
+  .head-section {
+    padding-right: 20px;
+  }
+  .main-box {
+    width: 50px;
+  }
+
+  .overlay-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /*logo box*/
+
+  .logo-box {
+    width: 100%;
+    height: 30%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 100%;
+    background-color: rgb(138, 192, 136);
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
+  .logo > span {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    padding: 3px;
+    background-color: aliceblue;
+  }
+
+  /*main card wrapper*/
+  .mainCardWrapper {
+    margin-top: 20px;
+  }
 }
