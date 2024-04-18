@@ -107,7 +107,10 @@ function showPlayer() {
     if (media.matches) {
       movieDisplay.style.flexDirection = 'column';
       movieImageBox.style.width = "100%";
-
+      movieTitle.style.fontSize = "24pt";
+      moviePlot.style.fontSize = "12px";
+      moviePlot.style.lineHeight = "18px";
+      moviePlot.style.color = "rgb(181, 181, 181)";
     }
   }
 

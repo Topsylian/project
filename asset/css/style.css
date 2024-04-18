@@ -286,7 +286,7 @@ body {
 
 @media screen and (max-width: 440px) {
   .head-section {
-    padding-right: 20px;
+    padding-right: 50px;
   }
   .main-box {
     width: 50px;
@@ -336,4 +336,52 @@ body {
   .mainCardWrapper {
     margin-top: 20px;
   }
+
+  
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.title > h1 {
+  font-size: 23pt;
+  font-variant: small-caps;
+}
+
+.title > img {
+  width: 50px;
+  height: 50px;
+}
+
+/*movie's information style*/
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.movie-info > .popularity, .movie-info > .movie-year {
+  width: fit-content;
+  background: rgb(33, 33, 33);
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 12px;
+}
+
+.movie-info > .imdbRating {
+  width: fit-content;
+  border: 1px dotted;
+  padding: 5px;
+	border-radius: 5px;
+  font-size: 14px;
+}
+
+.movie-actors {
+  font-size: 14px;
+  font-style: italic;
+	margin-bottom: 20px;
+}
 }
