@@ -110,9 +110,9 @@ function showPlayer() {
       movieImageBox.style.borderRadius = "10px 10px 0px 0px";
       movieImage.style.borderRadius = "10px 10px 0px 0px";
       movieTitle.style.fontSize = "24pt";
-      moviePlot.style.fontSize = "12px";
+      moviePlot.style.fontSize = "14px";
       moviePlot.style.lineHeight = "18px";
-      moviePlot.style.color = "rgb(130, 130, 130)";
+      moviePlot.style.color = "rgb(150, 150, 150)";
     }
   }
 

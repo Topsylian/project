@@ -20,9 +20,9 @@ body {
 }
 
 .head-section {
-	width: 100%;
-	height: 100vh;
-	display: flex;
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
 .main-box {
@@ -133,29 +133,29 @@ body {
   width: 100%;
   height: 70vh;
   position: relative;
-	margin-bottom: 30px;
-	border-radius: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
 }
 
 .mainCard > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-	border-radius: 20px;
+  border-radius: 20px;
 }
 
 .image-line-box {
-	display: flex;
-	gap: 10px;
-	position: absolute;
-	bottom: 0;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
 }
 
 .image-line-box > div {
-	width: 50px;
-	height: 5px;
-	border-radius: 5px;
-	background-color: aliceblue;
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: aliceblue;
 }
 
 .mainCard > div.overlay {
@@ -167,11 +167,11 @@ body {
     rgba(0, 0, 0, 0.5)
   );
   position: absolute;
-	top: 0;
+  top: 0;
   display: flex;
   align-items: center;
   padding-left: 22px;
-	border-radius: 15px;
+  border-radius: 15px;
 }
 
 .overlay-content {
@@ -217,13 +217,13 @@ body {
   width: fit-content;
   border: 1px dotted;
   padding: 5px;
-	border-radius: 5px;
+  border-radius: 5px;
 }
 
 .movie-actors {
   font-size: 14px;
   font-style: italic;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .watch {
@@ -242,24 +242,25 @@ body {
 /*Now playing movie*/
 
 .now-playing-movie {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	font-family: 'Poppins', sans-serif;
-	margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
 }
 
 .now-playing-movie-box {
-	width: 100%;
-	display: flex;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-	gap: 12px;
-	font-family: 'Poppins', sans-serif;
-	margin-bottom: 50px;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
 }
 
-.now-playing-movie-box  p, .now-playing-movie-box h4{
+.now-playing-movie-box p,
+.now-playing-movie-box h4 {
   font-size: 14px;
   color: aliceblue;
 }
@@ -267,21 +268,21 @@ body {
 /*popular movie styling*/
 
 .popular-movie {
-	width: 100%;
-	display: flex;
+  width: 100%;
+  display: flex;
   flex-direction: column;
-	gap: 12px;
-	font-family: 'Poppins', sans-serif;
-	margin-bottom: 50px;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
 }
 
 .popular-movie-box {
-	width: 100%;
-	display: flex;
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
-	gap: 12px;
-	font-family: 'Poppins', sans-serif;
-	margin-bottom: 50px;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 440px) {
@@ -311,7 +312,7 @@ body {
     border-radius: 15px;
     border: 1px solid;
   }
-  
+
   .logo {
     width: 40px;
     height: 30px;
@@ -323,7 +324,7 @@ body {
     color: aliceblue;
     text-decoration: none;
   }
-  
+
   .logo > span {
     height: 5px;
     width: 5px;
@@ -337,51 +338,50 @@ body {
     margin-top: 20px;
   }
 
-  
-.title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+  .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-.title > h1 {
-  font-size: 23pt;
-  font-variant: small-caps;
-}
+  .title > h1 {
+    font-size: 23pt;
+    font-variant: small-caps;
+  }
 
-.title > img {
-  width: 50px;
-  height: 50px;
-}
+  .title > img {
+    width: 50px;
+    height: 50px;
+  }
 
-/*movie's information style*/
-.movie-info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+  /*movie's information style*/
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-.movie-info > .popularity, .movie-info > .movie-year {
-  width: fit-content;
-  background: rgb(33, 33, 33);
-  font-weight: 600;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid;
-  font-size: 12px;
-}
+  .movie-info > .popularity,
+  .movie-info > .movie-year {
+    width: fit-content;
+    background: rgb(33, 33, 33);
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 12px;
+  }
 
-.movie-info > .imdbRating {
-  width: fit-content;
-  border: 1px dotted;
-  padding: 5px;
-	border-radius: 5px;
-  font-size: 14px;
-}
+  .movie-info > .imdbRating {
+    width: fit-content;
+    border: 1px dotted;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
 
-.movie-actors {
-  font-size: 14px;
-  font-style: italic;
-	margin-bottom: 20px;
-}
+  .movie-plot > p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }
