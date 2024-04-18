@@ -112,6 +112,15 @@ function showPlayer() {
       movieTitle.style.fontSize = "24pt";
       moviePlot.style.fontSize = "14px";
       moviePlot.style.lineHeight = "18px";
+      moviePlot.style.color = "rgb(170, 170, 170)";
+    } else {
+      movieDisplay.style.flexDirection = 'row';
+      movieImageBox.style.width = "30%";
+      movieImageBox.style.borderRadius = "10px 10px 10px 10px";
+      movieImage.style.borderRadius = "10px 10px 10px 10px";
+      movieTitle.style.fontSize = "32pt";
+      moviePlot.style.fontSize = "16px";
+      moviePlot.style.lineHeight = "18px";
       moviePlot.style.color = "rgb(150, 150, 150)";
     }
   }
